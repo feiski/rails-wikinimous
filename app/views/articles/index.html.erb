@@ -1,0 +1,7 @@
+<h1> Here comes a new challenger! </h1>
+<% @articles.each do |article| %>
+  <h2><%= link_to article.title, article_path(article.id) %></h2>
+  <p> <%= article.content %> </p>
+<% end %>
+<%= link_to "Home page", articles_path %>
+<p><%= link_to "Add a new article", new_article_path %></p>

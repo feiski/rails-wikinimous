@@ -1,7 +1,20 @@
-<h1> Here comes a new challenger! </h1>
-<% @articles.each do |article| %>
-  <h2><%= link_to article.title, article_path(article.id) %></h2>
-  <p> <%= article.content %> </p>
-<% end %>
-<%= link_to "Home page", articles_path %>
-<p><%= link_to "Add a new article", new_article_path %></p>
+<h1 class="display-4 text-center rainbow-text">
+  Here Comes a New Challenger!
+</h1>
+
+<div class="d-flex justify-content-between">
+  <%= link_to "Home page", articles_path %>
+  <%= link_to "Add a new article", new_article_path, class: "btn btn-primary" %>
+  </div>
+</div>
+
+<div class="container">
+  <% @articles.each do |article| %>
+    <div class="row my-4 bg-light">
+      <div class="col">
+        <h2><%= link_to article.title, article_path(article.id) %></h2>
+        <p><%= article.content %></p>
+      </div>
+    </div>
+  <% end %>
+</div>

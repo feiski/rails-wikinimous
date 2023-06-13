@@ -1,8 +1,14 @@
-<h2><%= @article.title %></h2>
-<p><%= @article.content %></p>
-<p><%= link_to "Edit article", edit_article_path(@article.id) %></p>
-<%= link_to "Delete",
-  article_path(@article),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
-<%= link_to "Home page", articles_path %>
+<h1 class="display-4 text-center rainbow-text">
+  Here Comes a New Challenger!
+</h1>
+
+<div class="container">
+  <h2><%= @article.title %></h2>
+  <p><%= @article.content %></p>
+  <p><%= link_to "Edit article", edit_article_path(@article.id) %></p>
+  <%= link_to "Delete",
+    article_path(@article),
+    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+  %>
+  <%= link_to "Home page", articles_path %>
+</div>
